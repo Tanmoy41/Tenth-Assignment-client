@@ -53,7 +53,7 @@ const Login = () => {
             });
     }
     return (
-        <div>
+        <div className="d-flex justify-content-center">
             <Button variant="outline-primary" onClick={handleGoogleSignIn}>Continue with Google</Button>
         </div>
     );

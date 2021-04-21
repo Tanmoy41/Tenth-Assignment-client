@@ -10,7 +10,7 @@ const CheckOut = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://limitless-hamlet-59432.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
@@ -27,7 +27,7 @@ const CheckOut = () => {
     const orderData = { ...loggedInUser, consignment: productData, orderTime: new Date().toDateString('dd/MM/yyyy') }
 
     const handleCheckOut = () => {
-        fetch(`http://localhost:5000/addOrder`, {
+        fetch(`https://limitless-hamlet-59432.herokuapp.com/addOrder`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -8,7 +8,7 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg">
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="justify-content-end" style={{ marginRight: '100px' }}>
+                    <Nav className="ml-auto justify-content-end" style={{ marginRight: '100px' }}>
                         <Nav.Item>
                             <Nav.Link href="/home">Home</Nav.Link>
                         </Nav.Item>

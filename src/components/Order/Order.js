@@ -7,7 +7,7 @@ const Order = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orderHistory?email=` + loggedInUser.email)
+        fetch(`https://limitless-hamlet-59432.herokuapp.com/orderHistory?email=` + loggedInUser.email)
             .then(res => res.json())
             .then(data => setBundles(data))
     }, [loggedInUser.email])

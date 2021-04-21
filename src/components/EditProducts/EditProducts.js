@@ -4,7 +4,7 @@ import { Button, Table } from 'react-bootstrap';
 const EditProducts = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://limitless-hamlet-59432.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -13,7 +13,7 @@ const EditProducts = () => {
 
     const deleteProduct = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://limitless-hamlet-59432.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
